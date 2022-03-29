@@ -1,0 +1,19 @@
+{
+  "name": "empreeduca-html-css",
+  "version": "1.0.0",
+  "description": "Curso HTML5, CSS3, JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "css3",
+    "js",
+    "hcode",
+    "jornaduca",
+    "empreeduca"
+  ],
+  "author": "hcode",
+  "license": "MIT"
+}

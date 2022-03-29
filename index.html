@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <title>Empreeduca / Hcode</title>
+</head>
+
+<body>
+    <main>
+        <header class="header-top-site">
+            <div id="container">
+                <div>
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.11357 17.5385L24 3.09017L43.8864 17.5385L36.2905 40.9164H11.7095L4.11357 17.5385Z"
+                            stroke="#EF6D58" stroke-width="5" />
+                        <path d="M23.5 14L32.535 20.5643L29.084 31.1857H17.916L14.465 20.5643L23.5 14Z"
+                            fill="#EF6D58" />
+                    </svg>
+                    <p>Agency</p>
+                </div>
+                <button type="button" class="show-mobile">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFF">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+                    </svg>
+                </button>
+                <nav class="show-desktop">
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </nav>
+                <button class="show-desktop">Contact</button>
+            </div>
+        </header>
+        <section id="hero">
+            <div>
+                <div class="banner">
+
+                    <picture>
+                        <source media="(min-width: 1440px)" srcset="assets/images/banner-desktop.png" />
+                        <img src="assets/images/banner.png" alt="banner" />
+                    </picture>
+                    <div class="modern-studio">
+                        <svg width="148" height="146" viewBox="0 0 148 146" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="modern-studio-star show-desktop">
+                            <path
+                                d="M74.8915 110.547L74 108.793L73.1085 110.547L57.3472 141.563L57.8052 106.775L57.8311 104.807L56.2264 105.946L27.8564 126.085L44.4289 95.4947L45.3662 93.7645L43.416 94.0274L8.93666 98.6753L37.827 79.2902L39.4611 78.1938L37.612 77.5202L4.92211 65.6124L39.5119 61.8738L41.4683 61.6624L40.1441 60.2067L16.7325 34.4711L49.0976 47.2354L50.9282 47.9573L50.4322 46.053L41.6621 12.3853L64.3881 38.7284L65.6736 40.2184L66.1193 38.3017L74 4.41474L81.8807 38.3017L82.3264 40.2184L83.6119 38.7284L106.338 12.3853L97.5678 46.053L97.0718 47.9573L98.9024 47.2354L131.268 34.4711L107.856 60.2067L106.532 61.6624L108.488 61.8738L143.078 65.6124L110.388 77.5202L108.539 78.1938L110.173 79.2902L139.063 98.6753L104.584 94.0274L102.634 93.7645L103.571 95.4947L120.144 126.085L91.7736 105.946L90.1689 104.807L90.1948 106.775L90.6528 141.563L74.8915 110.547Z"
+                                stroke="#6A6C8E" stroke-width="2" />
+                        </svg>
+                        <h2>Modern Studio</h2>
+                        <h1>We're Help <wbr/>To Build Your Dream Project</h1>
+                        <p>Agency provides a full service range including technical skills, design, business
+                            understanding.</p>
+                        <div class="button-group">
+                            <button>how we work</button>
+                            <button>Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('scroll', (e) => {
+            const scroll = window.scrollY;
+            const header = document.querySelector('.header-top-site');
+            if (scroll > 800) {
+                header.classList.add('scroll');
+            } else {
+                header.classList.remove('scroll');
+            }
+        });
+    </script>
+
+</body>
+
+</html>
