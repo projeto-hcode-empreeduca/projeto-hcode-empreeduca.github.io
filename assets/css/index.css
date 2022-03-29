@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Epilogue-Regular";
+    src: url("../fonts/epilogue/Epilogue-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Epilogue-Bold";
+    src: url("../fonts/epilogue/Epilogue-Bold.ttf") format("truetype");
+}
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Epilogue-Regular";
+}
+body a {
+    text-decoration: none;
+}
+body ul li {
+    list-style: none;
+}
+main header {
+    border: 1px solid #000;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    justify-content: space-between;    
+    align-items: center;
+    padding: 16px 23px;
+    color: #FFF;
+}
+main header > div#container {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+main header > div#container > div {
+    display: flex;
+    align-items: center;
+}
+main header > div#container > div > p {
+    margin: 0 0 0 14px;
+    font-family: "Epilogue-Bold";
+    font-size: 1.5em;    
+}
+main header button {
+    width: 48px;
+    height: 48px;
+    border: 1px solid #FFFFFF30;
+    border-radius: 6px;
+    background-color: unset;
+}
+main #hero {
+    background-color: #28293E;
+    position: absolute;
+    padding-top: 80px;
+    top: 0;
+}
+main .show-mobile {
+    display: block;
+}
+main .show-desktop {
+    display: none;
+}
+
+main #hero > p {
+    color: #FFF;
+}
+
+@media screen and (min-width: 768px) {
+    main .show-mobile {
+        display: none;
+    }
+    main .show-desktop {
+        display: block;
+    }
+    main header > #container nav ul {
+        display: flex;
+    }
+    main header > #container nav ul li {
+        margin-left: 30px;
+    }
+    main header > #container nav a {
+        color: #FFF;
+    }
+    main header > #container > a {
+        background-color: unset;
+        width: 140px;
+        height: 48px;
+        color: #FFF;
+        font-weight: 900;
+        text-transform: uppercase;
+        border: 1px solid #FFFFFF30;
+        border-radius: 6px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
