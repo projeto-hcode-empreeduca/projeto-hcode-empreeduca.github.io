@@ -1,101 +1,251 @@
+/*
+Tudo que for smartphone sem mediaqueries.
+*/
+/* diretiva CSS é um meta dado que altera um comportamento do código. */
 @font-face {
-    font-family: "Epilogue-Regular";
-    src: url("../fonts/epilogue/Epilogue-Regular.ttf") format("truetype");
+  font-family: "Epilogue-Regular";
+  src: url("../fonts/epilogue/Epilogue-Regular.ttf") format("truetype");
 }
 @font-face {
-    font-family: "Epilogue-Bold";
-    src: url("../fonts/epilogue/Epilogue-Bold.ttf") format("truetype");
+  font-family: "Epilogue-Regular";
+  src: url("../fonts/epilogue/Epilogue-Black.ttf") format("truetype");
+  font-weight: 800;
 }
+@font-face {
+  font-family: "Epilogue-Bold";
+  src: url("../fonts/epilogue/Epilogue-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Epilogue-Bold";
+  src: url("../fonts/epilogue/Epilogue-ExtraBold.ttf") format("truetype");
+  font-weight: 900;
+}
+/* seletor universal */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+/* box-sizing - content-box */
+/*
+seletor impuro. Seletor de Tag genérica. 
+CSS reset.
+*/
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "Epilogue-Regular";
+  margin: 0;
+  padding: 0;
+  font-family: "Epilogue-Regular";
+  min-height: 4000px;
 }
 body a {
-    text-decoration: none;
+  text-decoration: none;
 }
 body ul li {
-    list-style: none;
+  list-style: none;
 }
-main header {
-    border: 1px solid #000;
-    display: flex;
-    width: 100%;
-    height: 80px;
-    justify-content: space-between;    
-    align-items: center;
-    padding: 16px 23px;
-    color: #FFF;
+main header.header-top-site {
+  display: flex;
+  width: 100%;
+  height: 80px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 23px;
+  color: #fff;
+  position: fixed;
+  z-index: 10;
+  transition-duration: 0.5s;
+  background: linear-gradient(#28293e00, #28293e00);
 }
+
+main header.header-top-site.scroll {
+  top: -80px;
+  transform: translateY(80px);
+  transition-duration: 0.5s;
+  background: linear-gradient(#28293e, #28293e00);
+}
+/* especificidade CSS */
 main header > div#container {
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 main header > div#container > div {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 main header > div#container > div > p {
-    margin: 0 0 0 14px;
-    font-family: "Epilogue-Bold";
-    font-size: 1.5em;    
+  margin: 0 0 0 14px;
+  font-family: "Epilogue-Bold";
+  font-size: 1.5em;
 }
 main header button {
-    width: 48px;
-    height: 48px;
-    border: 1px solid #FFFFFF30;
-    border-radius: 6px;
-    background-color: unset;
+  width: 48px;
+  height: 48px;
+  border: 1px solid #ffffff30;
+  border-radius: 6px;
+  background-color: unset;
 }
 main #hero {
-    background-color: #28293E;
-    position: absolute;
-    padding-top: 80px;
-    top: 0;
+  width: 100%;
+  background-color: #28293e;
+  position: absolute;
+  padding-top: 80px;
+  top: 0;
+  min-height: 100vh;
 }
 main .show-mobile {
-    display: block;
+  display: block;
 }
 main .show-desktop {
+  display: none;
+}
+
+main #hero p,
+main #hero h1 {
+  color: #fff;
+}
+main #hero h2 {
+  color: #ef6d58;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 4px;
+}
+main #hero h1 {
+  font-size: 3.5em;
+  font-family: "Epilogue-Bold";
+  font-weight: 900;
+  margin: 0;
+}
+main #hero p {
+  letter-spacing: 1px;
+  line-height: 2em;
+}
+main #hero {
+  padding: 90px 5% 5% 5%;
+}
+main #hero .button-group {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+}
+main #hero .button-group button {
+  min-width: 150px;
+  min-height: 50px;
+  background: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #fff;
+}
+/* pseudo seletor. : significa um seletor condicional */
+main #hero .button-group button:first-child {
+  background-color: #ef6d58;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 800;
+}
+
+main #hero .modern-studio .modern-studio-star {
+  position: absolute;
+}
+
+/* breakpoints - ponto de mudança com cada device */
+/* desta linha para cima é resolução menor que 576px */
+/* medida css e medida do dispositivo */
+
+/* Landscape mode */
+@media (min-width: 576px) {
+}
+
+/* Tablets e desktop antigos - chromebook */
+@media (min-width: 768px) {
+  main .show-mobile {
     display: none;
+  }
+  main .show-desktop {
+    display: block;
+  }
+  main header > #container nav ul {
+    display: flex;
+  }
+  main header > #container nav ul li {
+    margin-left: 30px;
+  }
+  main header > #container nav a {
+    color: #fff;
+  }
+  main header > #container > a {
+    background-color: unset;
+    width: 140px;
+    height: 48px;
+    color: #fff;
+    font-weight: 900;
+    text-transform: uppercase;
+    border: 1px solid #ffffff30;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main #hero .banner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 5% 8%;
+  }
+  main #hero .modern-studio {
+    width: 60%;
+  }
+  main #hero picture {
+    width: 40%;
+  }
+  main #hero .modern-studio .modern-studio-star {
+    position: absolute;
+    top: 13vw;
+    left: 30vw;
+    z-index: 0;
+  }
+  main #hero .modern-studio h1 {
+    position: relative;
+    margin: 10% 0;
+    z-index: 2;
+  }
+  main #hero .button-group {
+    justify-content: flex-start;
+    margin-top: 10%;
+  }
+  main #hero .button-group button:nth-child(2) {
+    margin-left: 5%;
+    font-size: 1.2em;
+  }
 }
 
-main #hero > p {
-    color: #FFF;
+/* Maioria dos Desktops */
+@media (min-width: 960px) {
+  main #hero .modern-studio {
+    width: 40%;
+  }
+  main #hero .modern-studio h1 {
+    font-size: 4em;
+  }
+  main #hero picture {
+    width: initial;
+  }
 }
 
-@media screen and (min-width: 768px) {
-    main .show-mobile {
-        display: none;
-    }
-    main .show-desktop {
-        display: block;
-    }
-    main header > #container nav ul {
-        display: flex;
-    }
-    main header > #container nav ul li {
-        margin-left: 30px;
-    }
-    main header > #container nav a {
-        color: #FFF;
-    }
-    main header > #container > a {
-        background-color: unset;
-        width: 140px;
-        height: 48px;
-        color: #FFF;
-        font-weight: 900;
-        text-transform: uppercase;
-        border: 1px solid #FFFFFF30;
-        border-radius: 6px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+/* Notebooks e telas full HD ou superior */
+@media (min-width: 1200px) {
+  main #hero .modern-studio {
+    width: 45%;
+  }
+  main #hero .modern-studio h1 {
+    font-size: 4.5em;
+  }
+}
+
+/* Extralarge - Ex: Ultrawide, iMacPro ou telas acima de 23" */
+@media (min-width: 1600px) {
 }

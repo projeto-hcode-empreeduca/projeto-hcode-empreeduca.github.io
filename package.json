@@ -1,12 +1,29 @@
 {
   "name": "empreeduca-html-css",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
+=======
+  "description": "Curso HTML5, CSS3, JavaScript",
+>>>>>>> dc27f6c0e7b580802450ad02282d154c0862e900
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+<<<<<<< HEAD
   "keywords": [],
   "author": "",
   "license": "ISC"
+=======
+  "keywords": [
+    "html5",
+    "css3",
+    "js",
+    "hcode",
+    "jornaduca",
+    "empreeduca"
+  ],
+  "author": "hcode",
+  "license": "MIT"
+>>>>>>> dc27f6c0e7b580802450ad02282d154c0862e900
 }
