@@ -43,6 +43,9 @@ body a {
 body ul li {
   list-style: none;
 }
+main header, main section {
+  padding: 0 23px;
+}
 main header.header-top-site {
   display: flex;
   width: 100%;
@@ -51,7 +54,6 @@ main header.header-top-site {
   align-items: center;
   padding: 16px 23px;
   color: #fff;
-  position: fixed;
   z-index: 10;
   transition-duration: 0.5s;
   background: linear-gradient(#28293e00, #28293e00);
@@ -89,7 +91,7 @@ main header button {
 main #hero {
   width: 100%;
   background-color: #28293e;
-  position: absolute;
+  margin-top: -80px;
   padding-top: 80px;
   top: 0;
   min-height: 100vh;
@@ -150,6 +152,92 @@ main #hero .button-group button:first-child {
 
 main #hero .modern-studio .modern-studio-star {
   position: absolute;
+}
+main #about-us {
+  padding-top: 47px;
+  padding-bottom: 115px;
+  background-color: #FDF0E9;  
+}
+main #about-us .clients {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin-bottom: 50px; */
+}
+main #about-us .clients img {
+  flex-basis: 150px;
+  height: 100%;
+  margin-bottom: 25px;
+}
+main #about-us .clients img:nth-child(5) {
+  margin: 0 auto;
+}
+main #about-us .hr {
+  border-color: #F3D1BF;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+main #about-us .about-section {
+  /* border-top: 1px solid;
+  padding-top: 70px;
+  border-top-color: #F3D1BF; */
+  display: flex;
+  flex-direction: column;
+}
+main .section-subtitle {
+  color: #EF6D58;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+main .section-title {
+  color: #391400;
+  font-weight: 900;
+  font-size: 2.5em;
+}
+main .section-description {
+  color: #39140065;
+  font-size: 1em;
+  line-height: 30px;
+}
+main #about-us .about-description > h3 {
+  color: #391400;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+main .button-link {
+  width: 138px;
+  height: 48px;
+  background-color: #FFF;
+  color: #391400;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0px 8px 10px #00000030;
+}
+main .about-description .button-link {
+  margin-top: 30px;
+}
+main #about-us .features {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+}
+main #about-us .features .features-items {
+  padding: 0;
+}
+main #about-us .features .features-items li {
+  /* list-style-image: url("../images/icons/check.png"); */
+  background: url("../images/icons/check.png") no-repeat;
+  list-style: none;
+  margin: 0;
+  vertical-align: middle;
+  padding: 10px 0 15px 50px;
+  margin-bottom: 15px;
 }
 
 /* breakpoints - ponto de mudança com cada device */
@@ -221,6 +309,17 @@ main #hero .modern-studio .modern-studio-star {
     margin-left: 5%;
     font-size: 1.2em;
   }
+  main #about-us .about-section {
+    flex-direction: row;
+  }
+  main #about-us .features {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+  main #about-us .about-section .about-description,
+  main #about-us .features .about-description {
+    margin-left: 50px;
+  }
 }
 
 /* Maioria dos Desktops */
@@ -234,6 +333,12 @@ main #hero .modern-studio .modern-studio-star {
   main #hero picture {
     width: initial;
   }
+  main #about-us .clients img {
+    margin-bottom: unset;
+  }
+  main #about-us .clients img:nth-child(5) {
+    margin: initial;
+  }
 }
 
 /* Notebooks e telas full HD ou superior */
@@ -243,6 +348,11 @@ main #hero .modern-studio .modern-studio-star {
   }
   main #hero .modern-studio h1 {
     font-size: 4.5em;
+  }
+  main #about-us > div {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

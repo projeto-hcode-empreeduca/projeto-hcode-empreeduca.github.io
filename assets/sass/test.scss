@@ -1,0 +1,31 @@
+div {
+    width: 200px;
+    height: 300px;
+    background-color: #000;
+    p {
+        font-size: 25px;
+    }
+    #about-us {
+        > div {
+            .services {
+                display: flex;
+            }
+        }
+    }
+}
+
+main {
+    header.header-top-site {
+
+    }
+    header {
+        > div#container {
+            > div {
+                > p {
+                    font-weight: bold;
+                }
+                display: flex;
+            }
+        }
+    }
+}
