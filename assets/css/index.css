@@ -47,6 +47,87 @@ body ul li {
   list-style: none;
 }
 
+form, section {
+  display: flex;
+}
+
+form {
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #391400;
+}
+
+input, select, textarea {
+  min-width: 374px;
+  height: 48px;
+  color: #391400;
+  border-radius: 6px;
+  border: 0.5px solid #F3D1BF;
+  background-color: #fff;
+  margin-top: 10%;
+  padding-left: 10%;
+}
+
+button.show-desktop {
+  width: 200px;
+}
+
+section {
+  background-color: #FDF0E9;
+}
+
+section#latest-blog-post,
+section#newsletter {
+  flex-direction: column;
+  min-height: 800px;
+}
+
+section#newsletter > header + div {
+  background: url("../images/newsletter-map-background.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 700px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+section#newsletter {
+  padding-top: 5%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+section#newsletter > header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+section div#form-get-in-touch {
+  flex-direction: column;
+  background: #fff;
+  border-radius: 6px;
+  padding: 2%;
+  width: 500px;
+  margin-left: 5%;
+}
+
+button {
+  background-color: #EF6D58;
+  border: 0;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  height: 48px;
+  margin-top: 10%;
+  padding: 0 20px;
+  width: 374px;
+}
+
 main header,
 main section {
   padding: 0 23px;
