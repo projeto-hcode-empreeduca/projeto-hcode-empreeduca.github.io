@@ -4,6 +4,8 @@ Tudo que for smartphone sem mediaqueries.
 /* diretiva CSS é um meta dado que altera um comportamento do código. */
 $font-color-title: #391400;
 $font-color-title-h3: #EF6D58;
+$bg-default: #FDF0E9;
+$font-color-alpha: #39140065;
 @font-face {
     font-family: "Epilogue-Regular";
     src: url("../fonts/epilogue/Epilogue-Regular.ttf") format("truetype");
@@ -41,6 +43,10 @@ body ul {
 body ul li {
     list-style: none;
 }
+body main {
+    display: flex;
+    flex-direction: column;
+}
 main header, main section {
     padding: 0 23px;
 }
@@ -54,9 +60,9 @@ main header {
     padding: 16px auto;
     color: #FFF;
 }
-main header > div#container {
-    min-height: 4000px;
-}
+// main header > div#container {
+//     min-height: 4000px;
+// }
 
 body a {
     text-decoration: none;
@@ -67,7 +73,7 @@ body ul li {
 }
 
 form, section {
-    display:flex;
+    display: flex;
 }
 form {
     flex-direction: column;
@@ -82,7 +88,6 @@ input, select, textarea {
     border-radius: 6px;
     border: 0.5px solid #F3D1BF;
     background-color: #fff;
-    margin-top: 10%;
     padding-left: 10%;
 }
 button.show-desktop {
@@ -113,7 +118,8 @@ section#newsletter {
 }
 section#newsletter > header {
     display: flex;
-    flex-direction: row;
+    // flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -122,8 +128,14 @@ section div#form-get-in-touch {
     background: #fff;
     border-radius: 6px;
     padding: 2%;
-    width: 500px;
+    // width: 500px;
+    width: 450px;
     margin-left: 5%;
+}
+section div#form-get-in-touch input,
+section div#form-get-in-touch select,
+section div#form-get-in-touch textarea {
+    width: 300px;
 }
 
 button {
@@ -185,6 +197,8 @@ main header button {
     border: 1px solid #FFFFFF30;
     border-radius: 6px;
     background-color: unset;
+    margin: 0;
+    padding: 0;
 }
 main #hero {
     background-color: #28293E;
@@ -192,6 +206,7 @@ main #hero {
     padding-bottom: 30px;
     margin-top: -80px;
     top: 0;
+    flex-direction: column;
 }
 main .show-mobile {
     display: block;
@@ -415,7 +430,7 @@ main .hr {
 }
 main .section-subtitle {
     font-size: 16px; /* Usar em nas fontes */
-    color: #EF6D58;
+    color: #d91e00;
     text-transform: uppercase;
     margin-top: 15px;
 }
@@ -426,7 +441,7 @@ main .section-title {
 }
 main .section-description {
     margin-top: 15px;
-    color: #39140065;
+    color: $font-color-title;
     font-size: 16px;
     line-height: 20px;
 }
@@ -447,6 +462,10 @@ main #about-us .about-section {
   border-top-color: #F3D1BF; */
     display: flex;
     flex-direction: column;
+    .image-about {
+        width: 329px;
+        height: 340px;
+    }
 }
 
 main .section-subtitle {
@@ -459,12 +478,6 @@ main .section-title {
     color: #391400;
     font-weight: 900;
     font-size: 2.5em;
-}
-
-main .section-description {
-    color: #39140065;
-    font-size: 1em;
-    line-height: 30px;
 }
 
 main #about-us .about-description>h3 {
@@ -607,9 +620,82 @@ main .services .help-items > div .help-item-description {
 main .services .help-items > div .button-without-border {
     margin-top: 25px;
 }
+main {
+    .form-input {
+        margin-top: 10%;
+    }
+    footer {
+        background-color: $bg-default;
+        padding: 120px 23px 35px 23px;
+        display: flex;
+        flex-direction: column;
+        #footer-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            border-bottom: 1px solid #F3D1BF;
+            padding-bottom: 50px;
+            width: 100%;
+            ul.menu-list {
+                li {
+                    margin-top: 20px;
+                    a {
+                        color: $font-color-title;
+                    }
+                }
+            }
+            .service {
+                padding: 50px 0;
+            }
+            .social-media {
+                display: flex;
+                .item {
+                    width: 48px;
+                    height: 48px;
+                    background-color: #EF6D58;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    & + .item { // Selecionando todos os elementos com a classe .item que possua como seu irmão outra classe .item antes dele
+                        margin-left: 10px;
+                    }
+                    .facebook, .instagram {
+                        height: 16px;
+                    }
+                    .twitter {
+                        height: 14px;
+                    }
+                }                
+            }
+        }
+        div#copyright {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-top: 45px;
+            p {
+                color: $font-color-alpha;
+                width: 200px;
+                margin: 0 auto;
+                text-align: center;
+                line-height: 25px;
+            }
+            div {
+                margin-top: 30px;
+                display: flex;
+                justify-content: space-between;
+                a {
+                    color: $font-color-title;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
 
 @media screen and (min-width: 768px) {
-
     main .show-mobile {
         display: none;
     }
@@ -633,31 +719,62 @@ main .services .help-items > div .button-without-border {
         font-weight: 900;
         text-transform: uppercase;
         border: 1px solid #FFFFFF30;
-    box-shadow: 0px 8px 10px #00000030;
-}
+        box-shadow: 0px 8px 10px #00000030;
 
-main .about-description .button-link {
-    margin-top: 30px;
-}
+    }
 
-main #about-us .features {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-}
+    main .about-description .button-link {
+        margin-top: 30px;
+    }
 
-main #about-us .features .features-items {
-    padding: 0;
-}
+    main #about-us .features {
+        margin-top: 80px;
+        display: flex;
+        flex-direction: column;
+    }
 
-main #about-us .features .features-items li {
-    /* list-style-image: url("../images/icons/check.png"); */
-    background: url("../images/icons/check.png") no-repeat;
-    list-style: none;
-    margin: 0;
-    vertical-align: middle;
-    padding: 10px 0 15px 50px;
-    margin-bottom: 15px;
+    main #about-us .features .features-items {
+        padding: 0;
+    }
+
+    main #about-us .features .features-items li {
+        /* list-style-image: url("../images/icons/check.png"); */
+        background: url("../images/icons/check.png") no-repeat;
+        list-style: none;
+        margin: 0;
+        vertical-align: middle;
+        padding: 10px 0 15px 50px;
+        margin-bottom: 15px;
+    }
+    main {
+        footer {
+            #footer-menu {
+                flex-direction: row;
+                width: 100%;
+                justify-content: space-between;
+                align-items: flex-start;
+                .service {
+                    padding: 0;
+                }
+            }
+            div#copyright {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                p {
+                    margin: 0;
+                    width: auto;
+                }
+                div {
+                    margin: 0;
+                    a:nth-child(2) {
+                        margin-left: 40px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 /* breakpoints - ponto de mudança com cada device */
@@ -754,7 +871,8 @@ main #about-us .features .features-items li {
 @media screen and (min-width: 1024px) {
     main header,
     main #hero > div,
-    main #about-us > div {
+    main #about-us > div,
+    main .desktop-max-width {
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
@@ -769,6 +887,10 @@ main #about-us .features .features-items li {
         flex-direction: row-reverse;
         justify-content: space-between;
         margin: 5% 8%;
+        .image-banner {
+            width: 329px;
+            height: 334px;
+        }
     }
 
     main #hero .modern-studio {
@@ -795,7 +917,12 @@ main #about-us .features .features-items li {
     main #hero .button-group {
         justify-content: flex-start;
         margin-top: 10%;
-    }
+        button {
+            &:first-child {
+                color: #2d2d2d;
+            }
+        }
+    }    
 
     main #hero .button-group button:nth-child(2) {
         margin-left: 5%;
@@ -814,7 +941,6 @@ main #about-us .features .features-items li {
     main #about-us .about-section .about-description,
     main #about-us .features .about-description {
         margin-left: 50px;
-    }
 }
 
 #latest-blog-post{
