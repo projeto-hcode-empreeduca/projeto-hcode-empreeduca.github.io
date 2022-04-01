@@ -4,7 +4,8 @@
   "description": "Curso HTML5, CSS3, JavaScript",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch assets/sass:assets/css"
+    "sass": "sass --no-source-map --watch assets/sass:assets/css",
+    "melhortimedomundo": "echo \"Vai Corinthians\""
   },
   "keywords": [
     "html5",
@@ -15,5 +16,8 @@
     "empreeduca"
   ],
   "author": "hcode",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.49.10"
+  }
 }

@@ -1,23 +1,28 @@
+@charset "UTF-8";
 /*
 CSS - Estilizar os elementos
 Posicionamento (distribuição) dos elementos na tela
 */
 .my-div {
-    border: 1px solid #000;
-    text-align: center;
+  border: 1px solid #000;
+  text-align: center;
 }
+
 body img {
-    height: 200px;
+  height: 200px;
 }
+
 .my-div .html5 {
-    float: left;
+  float: left;
 }
+
 .my-div .css3,
 .my-div .javascript {
-    margin: 0 5%;
+  margin: 0 5%;
 }
+
 .my-div .hcode {
-    float: right;
+  float: right;
 }
 
 /* //////////////////////// */
@@ -32,46 +37,55 @@ Para que o flex funcione é necessário ter um container
 
 */
 .my-flex-div {
-    border: 1px solid #000;
-    display: flex; /* Essa propriedade sempre vai no container */
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    height: 1000px;
-    flex-direction: column;
-    width: 100%;
+  border: 1px solid #000;
+  display: flex;
+  /* Essa propriedade sempre vai no container */
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 1000px;
+  flex-direction: column;
+  width: 100%;
 }
+
 .my-flex-div img {
-    flex-basis: 200px;
-    height: 200px;
+  flex-basis: 200px;
+  height: 200px;
 }
+
 .my-flex-div .my-button {
-    background-color: #000;
-    color: #fff;
-    font-size: 18px;
-    width: 200px;
-    height: 200px;    
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  width: 200px;
+  height: 200px;
 }
+
 .my-flex-div .second-div {
-    width: 300px;
-    height: 300px;
-    border: 1px solid red;
+  width: 300px;
+  height: 300px;
+  border: 1px solid red;
 }
+
 @media screen and (min-width: 1024px) {
-    .my-flex-div {
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    .my-flex-div .javascript {
-        order: 1;
-    }
-    .my-flex-div .html5 {
-        order: 4;
-    }
-    .my-flex-div .css3 {
-        order: 3;
-    }
-    .my-flex-div .hcode {
-        order: 2;
-    }
+  .my-flex-div {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .my-flex-div .javascript {
+    order: 1;
+  }
+
+  .my-flex-div .html5 {
+    order: 4;
+  }
+
+  .my-flex-div .css3 {
+    order: 3;
+  }
+
+  .my-flex-div .hcode {
+    order: 2;
+  }
 }
