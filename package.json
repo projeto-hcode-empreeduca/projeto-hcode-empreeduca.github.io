@@ -4,7 +4,7 @@
   "description": "Curso HTML5, CSS3, JavaScript",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch assets/sass:assets/css-final"
+    "sass": "sass --watch assets/sass:assets/css"
   },
   "keywords": [
     "html5",
