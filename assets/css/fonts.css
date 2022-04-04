@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "Epilogue-Regular";
+  src: url("../fonts/epilogue/Epilogue-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Epilogue-Bold";
+  src: url("../fonts/epilogue/Epilogue-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Epilogue-Extra-Bold";
+  src: url("../fonts/epilogue/Epilogue-ExtraBold.ttf") format("truetype");
+}

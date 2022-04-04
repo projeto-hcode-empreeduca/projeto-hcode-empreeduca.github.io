@@ -1,0 +1,20 @@
+// Variáveis Sass x Variáveis CSS
+/*
+SASS
+
+$color: #000;
+*/
+
+/*
+CSS
+*/
+:root {
+    --font-color-title: #391400;
+    --font-color-title-h3: #EF6D58;
+    --bg-default: #FDF0E9;
+    --font-color-alpha: #39140065;
+}
+// Chamar uma variável
+// var(--color)
+// 1 - É CSS puro, padrão
+// 2 - É possível trabalhar com JS e variáveis do CSS

@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/* seletor universal */
+* {
+  box-sizing: border-box;
+}
+
+/* box-sizing - content-box */
+/*
+seletor impuro. Seletor de Tag genérica. 
+CSS reset.
+*/
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Epilogue-Regular";
+}
+body a {
+  text-decoration: none;
+}
+body ol, body ul {
+  padding: 0;
+}
+body ol li, body ul li {
+  list-style: none;
+}
+body main {
+  display: flex;
+  flex-direction: column;
+}

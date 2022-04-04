@@ -1,0 +1,14 @@
+/*
+SASS
+
+$color: #000;
+*/
+/*
+CSS
+*/
+:root {
+  --font-color-title: #391400;
+  --font-color-title-h3: #EF6D58;
+  --bg-default: #FDF0E9;
+  --font-color-alpha: #39140065;
+}
