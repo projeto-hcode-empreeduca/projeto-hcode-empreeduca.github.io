@@ -200,16 +200,16 @@
 
     <script>
 
-        const getElementFadeIn = (element, scroll) => {
+        const getElementFadeIn = (element, scroll, effect) => {
             // console.log('verificando o resultado de el', element);
             // document.querySelectorAll(el).forEach(element => {
             const offSet = element.offsetTop;
 
             const windowHeight = window.innerHeight;
-            if (scroll >= (offSet - windowHeight - 50) && scroll <= (offSet - 50)) {
-                element.classList.add('fadeUp');
+            if (scroll < offSet && scroll < (offSet + window.innerHeight)) {
+                element.classList.add(effect);
             } else {
-                element.classList.remove('fadeUp');
+                element.classList.remove(effect);
             }
 
             // })
@@ -221,9 +221,12 @@
             // getElementFadeIn(".clients", scroll);
             // getElementFadeIn(".about-section", scroll);
             document.querySelectorAll(".animateFadeUp").forEach((element) => {
-                getElementFadeIn(element, scroll);
+                getElementFadeIn(element, scroll, 'fadeUp');
             });
 
+            document.querySelectorAll(".animateFadeLeft").forEach((element) => {
+                getElementFadeIn(element, scroll, 'fadeLeft');
+            });
             if (scroll > 800) {
                 header.classList.add('scroll');
             } else {
