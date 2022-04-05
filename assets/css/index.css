@@ -375,6 +375,38 @@ main #about-us .features .features-items li {
   animation-delay: 0.5s;
 }
 
+@keyframes fadeRightAnimation {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.fadeRight {
+  animation-name: fadeRightAnimation;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUpAnimation {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.fadeUp {
+  animation-name: fadeUpAnimation;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
 /* Landscape mode */
 /* Tablets e desktop antigos - chromebook */
 @media (min-width: 768px) {
