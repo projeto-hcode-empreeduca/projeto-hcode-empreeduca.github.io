@@ -355,6 +355,56 @@ main #about-us .features .features-items li {
 /* desta linha para cima é resolução menor que 576px */
 /* medida css e medida do dispositivo */
 
+// Entendendo transformação, transição e animação CSS
+
+// main #hero .modern-studio h1
+
+@keyframes fadeLeftAnimation{
+    from{
+        transform: translateX(-300px);
+        opacity:0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+.fadeLeft{
+    
+    animation-name: fadeLeftAnimation;
+    animation-duration: 1s;
+    animation-delay:0.5s;
+}
+
+// main {
+//     #hero {
+//      .modern-studio{
+//          h1 {
+//                 transform: translateX(-300px);
+//                 transition-duration: 1s;
+//                 opacity:0;
+//          }
+//      }
+//     }
+// }
+
+// body:hover {
+//     #hero {
+//         .modern-studio{
+//             h1 {
+//                 transform: translateX(0px);
+//                 opacity:1;
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
 /* Landscape mode */
 @media (min-width: 576px) {}
 

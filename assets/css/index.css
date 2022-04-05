@@ -359,6 +359,22 @@ main #about-us .features .features-items li {
 /* breakpoints - ponto de mudança com cada device */
 /* desta linha para cima é resolução menor que 576px */
 /* medida css e medida do dispositivo */
+@keyframes fadeLeftAnimation {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.fadeLeft {
+  animation-name: fadeLeftAnimation;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
 /* Landscape mode */
 /* Tablets e desktop antigos - chromebook */
 @media (min-width: 768px) {
