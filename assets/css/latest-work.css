@@ -1,0 +1,68 @@
+section#latest-work {
+  background-color: var(--bg-blue-dark);
+  color: var(--font-color-white);
+}
+section#latest-work > div {
+  width: 100%;
+}
+section#latest-work > div select {
+  min-width: 100%;
+  padding-left: 16px;
+}
+section#latest-work > div h2, section#latest-work > div h4 {
+  color: var(--font-color-white);
+}
+section#latest-work > div .works {
+  margin-top: 50px;
+  display: grid;
+  grid-auto-rows: 416px;
+  row-gap: 32px;
+}
+section#latest-work > div .works .work-item {
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-left: 28px;
+  padding-bottom: 51px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+section#latest-work > div .works .work-item:nth-child(1) {
+  background-image: url("../images/sofa.png");
+}
+section#latest-work > div .works .work-item:nth-child(2) {
+  background-image: url("../images/keyboard.png");
+}
+section#latest-work > div .works .work-item:nth-child(3) {
+  background-image: url("../images/workmedia.png");
+}
+section#latest-work > div .works .work-item:nth-child(4) {
+  background-image: url("../images/dddone.png");
+}
+section#latest-work > div .works .work-item .badge {
+  height: 38px;
+  background-color: #fff;
+  border-radius: 19px;
+  color: #000;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 15px;
+}
+section#latest-work > div .works .work-item .work-name {
+  margin: 23px 0 0 0;
+  font-size: 2.5em;
+}
+
+@media screen and (min-width: 768px) {
+  section#latest-work > div .works {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
+  section#latest-work > div .works .work-item:nth-child(2),
+section#latest-work > div .works .work-item:nth-child(3) {
+    grid-column-end: span 2;
+  }
+}

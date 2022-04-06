@@ -27,3 +27,13 @@ body main {
   display: flex;
   flex-direction: column;
 }
+body .section-with-padding {
+  padding: 92px 23px;
+}
+body .section-with-padding h2 {
+  margin: 25px 0;
+  font-size: 3.5em;
+}
+body .section-with-padding h3, body .section-with-padding h2 {
+  text-align: center;
+}

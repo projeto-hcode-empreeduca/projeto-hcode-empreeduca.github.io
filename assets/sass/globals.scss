@@ -24,4 +24,14 @@ body {
         display: flex;
         flex-direction: column;
     }
+    .section-with-padding {
+        padding: 92px 23px;
+        h2 {
+            margin: 25px 0;
+            font-size: 3.5em;
+        }
+        h3, h2 {
+            text-align: center;
+        }
+    }
 }

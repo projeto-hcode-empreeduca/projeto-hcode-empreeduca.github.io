@@ -1,6 +1,8 @@
 @import 'fonts.scss';
 @import 'globals.scss';
 @import 'variables.scss';
+@import 'latest-work.scss';
+@import 'testimonials.scss';
 
 /*
 Tudo que for smartphone sem mediaqueries.
@@ -51,8 +53,10 @@ section {
 section#latest-blog-post,
 section#newsletter {
     flex-direction: column;
-    min-height: 800px;
-    
+    min-height: 800px;    
+}
+section#latest-blog-post {
+    padding-top: 150px;
 }
 section#newsletter>header+div {
     background: url("../images/newsletter-map-background.jpg") no-repeat;
@@ -327,6 +331,11 @@ main #hero .button-group button:first-child {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     font-weight: 800;
+}
+
+main #hero .banner {
+    display: flex;
+    flex-direction: column;
 }
 
 main #hero .modern-studio .modern-studio-star {
@@ -832,7 +841,6 @@ main {
     main #about-us .clients img {
         margin: initial!important;
     }
-}
 
     main #hero .banner {
         display: flex;
@@ -895,7 +903,7 @@ main {
         margin-left: 50px;
 }
 
-#latest-blog-post{
+#latest-blog-post {
     background-color: #FDF0E9;
     > header  h3{
         font-weight: normal;
@@ -907,6 +915,7 @@ main {
         font-size: 2em;
         margin: 5%;
     }
+}
 }
 
 @media (min-width: 768px) {
@@ -957,7 +966,8 @@ main {
         }
         >div.card-group {
             display: flex;
-            flex-direction: row;
+            // flex-direction: row;
+            flex-direction: column;
             padding: 2% 10%;
             // &:hover {
             //     background:#b39586;
@@ -1016,7 +1026,8 @@ main {
         font-size: 4.5em;
     }
 
-    main #about-us>div {
+    main #about-us>div,
+    main .max-width-desktop {
         max-width: 1200px;
         width: 100%;
         margin: 0 auto;
