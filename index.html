@@ -44,12 +44,11 @@
             <div>
                 <div class="banner">
 
-                    <picture>
+                    <picture class="fadeRight">
                         <source media="(min-width: 1440px)" srcset="assets/images/banner-desktop.png" />
                         <img src="assets/images/banner.png" alt="banner" class="image-banner" />
                     </picture>
-
-                    <div class="modern-studio">
+                    <div class="modern-studio fadeLeft">
                         <svg width="148" height="146" viewBox="0 0 148 146" fill="none"
                             xmlns="http://www.w3.org/2000/svg" class="modern-studio-star show-desktop">
                             <path
@@ -87,7 +86,7 @@
         <section id="about-us">
 
             <div>
-                <div class="clients">
+                <div class="clients animateFadeUp">
                     <img src="assets/images/Bitmap.png" alt="Digitalside" />
                     <img src="assets/images/Bitmap-1.png" alt="Vortex" />
                     <img src="assets/images/Bitmap-2.png" alt="Travel Explorer" />
@@ -103,7 +102,7 @@
                         <img src="assets/images/chair.png" alt="Homem e uma cadeira atrás" class="image-about" />
                     </div>
 
-                    <div class="about-description">
+                    <div class="about-description animateFadeUp">
                         <p class="section-subtitle">About</p>
                         <h2 class="section-title">An Experience Design Agency</h2>
                         <h3>Provides a full service range</h3>
@@ -347,12 +346,12 @@
         <section id="latest-blog-post">
             <header>
                 <div>
-                    <h3>OUR BLOG</h3>
-                    <h2>Latest Blog Articles</h2>
+                    <h3 class="section-subtitle">OUR BLOG</h3>
+                    <h2 class="section-title">Latest Blog Articles</h2>
                 </div>
-                <button>Discovery All</button>
+                <button class="button-link">Discovery All</button>
             </header>
-            <div class="card-group">
+            <div class="card-group animateFadeUp">
 
                 <div class="card-list">
                     <picture><img src="assets/images/card-list-01.webp" alt="Card 01"></picture>
@@ -512,9 +511,34 @@
     </main>
 
     <script>
+
+        const getElementFadeIn = (element, scroll, effect) => {
+            // console.log('verificando o resultado de el', element);
+            // document.querySelectorAll(el).forEach(element => {
+            const offSet = element.offsetTop;
+
+            const windowHeight = window.innerHeight;
+            if (scroll < offSet && scroll < (offSet + window.innerHeight)) {
+                element.classList.add(effect);
+            } else {
+                element.classList.remove(effect);
+            }
+
+            // })
+        }
+
         document.addEventListener('scroll', (e) => {
             const scroll = window.scrollY;
             const header = document.querySelector('.header-top-site');
+            // getElementFadeIn(".clients", scroll);
+            // getElementFadeIn(".about-section", scroll);
+            document.querySelectorAll(".animateFadeUp").forEach((element) => {
+                getElementFadeIn(element, scroll, 'fadeUp');
+            });
+
+            document.querySelectorAll(".animateFadeLeft").forEach((element) => {
+                getElementFadeIn(element, scroll, 'fadeLeft');
+            });
             if (scroll > 800) {
                 header.classList.add('scroll');
             } else {

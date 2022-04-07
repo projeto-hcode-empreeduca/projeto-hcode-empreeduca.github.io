@@ -464,6 +464,85 @@ section#testimonials-section .testimonials .testimonial-item .person > div span 
     grid-template-rows: 1fr 1fr;
   }
 }
+#latest-blog-post {
+  flex-direction: column;
+  min-height: 800px;
+  padding-top: 150px;
+  background-color: #FDF0E9;
+}
+#latest-blog-post > header h3 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.8em;
+}
+#latest-blog-post > header h2 {
+  font-weight: 900;
+  font-size: 2em;
+}
+
+@media (min-width: 768px) {
+  #latest-blog-post > header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+    align-items: center;
+  }
+  #latest-blog-post > header h2, #latest-blog-post > header h3 {
+    color: var(--font-color-title);
+    margin: 0;
+    flex: 1;
+  }
+  #latest-blog-post > header h2 {
+    width: 60%;
+  }
+  #latest-blog-post > header h3 {
+    color: var(--font-color-title-h3);
+    margin-bottom: 5%;
+  }
+  #latest-blog-post > header .card-list h4, #latest-blog-post > header .card-list span {
+    color: var(--font-color-title);
+  }
+  #latest-blog-post > header button {
+    width: 200px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 5px;
+    color: var(--font-color-title);
+    box-shadow: 0 3px 9px 0 #39140011;
+    font-weight: bold;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+  #latest-blog-post > header button:hover {
+    transform: scale(1.5);
+  }
+  #latest-blog-post > header h2 {
+    font-size: 4em;
+  }
+  #latest-blog-post > div.card-group {
+    display: flex;
+    flex-direction: column;
+    padding: 2% 10%;
+  }
+  #latest-blog-post > div.card-group .card-list {
+    margin: 5% 5%;
+  }
+  #latest-blog-post > div.card-group .card-list:first-child {
+    margin-left: 0;
+  }
+  #latest-blog-post footer {
+    min-height: 100px;
+  }
+  #latest-blog-post footer hr {
+    border-top: none;
+    border-bottom: solid 0.5px #F3D1BF;
+    width: 80%;
+    margin: 2% auto;
+  }
+}
 /*
 Tudo que for smartphone sem mediaqueries.
 */
@@ -473,7 +552,6 @@ main header, main section {
 }
 
 main header {
-  border: 1px solid #000;
   display: flex;
   width: 100%;
   height: 80px;
@@ -513,14 +591,9 @@ section {
   background-color: #FDF0E9;
 }
 
-section#latest-blog-post,
 section#newsletter {
   flex-direction: column;
   min-height: 800px;
-}
-
-section#latest-blog-post {
-  padding-top: 150px;
 }
 
 section#newsletter > header + div {
@@ -993,6 +1066,54 @@ main footer div#copyright div a {
 /* breakpoints - ponto de mudança com cada device */
 /* desta linha para cima é resolução menor que 576px */
 /* medida css e medida do dispositivo */
+@keyframes fadeLeftAnimation {
+  from {
+    transform: translateX(-300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.fadeLeft {
+  animation-name: fadeLeftAnimation;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeRightAnimation {
+  from {
+    transform: translateX(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.fadeRight {
+  animation-name: fadeRightAnimation;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUpAnimation {
+  from {
+    transform: translateY(300px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.fadeUp {
+  animation-name: fadeUpAnimation;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
 /* Landscape mode */
 /* Tablets e desktop antigos - chromebook */
 @media (min-width: 768px) {
@@ -1114,83 +1235,6 @@ main .desktop-max-width {
   main #about-us .about-section .about-description,
 main #about-us .features .about-description {
     margin-left: 50px;
-  }
-
-  #latest-blog-post {
-    background-color: #FDF0E9;
-  }
-  #latest-blog-post > header h3 {
-    font-weight: normal;
-    text-transform: uppercase;
-    font-size: 0.8em;
-  }
-  #latest-blog-post > header h2 {
-    font-weight: 900;
-    font-size: 2em;
-    margin: 5%;
-  }
-}
-@media (min-width: 768px) {
-  #latest-blog-post > header {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 10%;
-    padding-right: 10%;
-    align-items: center;
-  }
-  #latest-blog-post > header h2, #latest-blog-post > header h3 {
-    color: var(--font-color-title);
-    margin: 0;
-    flex: 1;
-  }
-  #latest-blog-post > header h2 {
-    width: 60%;
-  }
-  #latest-blog-post > header h3 {
-    color: var(--font-color-title-h3);
-    margin-bottom: 5%;
-  }
-  #latest-blog-post > header .card-list h4, #latest-blog-post > header .card-list span {
-    color: var(--font-color-title);
-  }
-  #latest-blog-post > header button {
-    width: 200px;
-    height: 50px;
-    background-color: #fff;
-    border-radius: 5px;
-    color: var(--font-color-title);
-    box-shadow: 0 3px 9px 0 #39140011;
-    font-weight: bold;
-    transition-duration: 0.5s;
-    cursor: pointer;
-  }
-  #latest-blog-post > header button:hover {
-    transform: scale(1.5);
-  }
-  #latest-blog-post > header h2 {
-    font-size: 4em;
-  }
-  #latest-blog-post > div.card-group {
-    display: flex;
-    flex-direction: column;
-    padding: 2% 10%;
-  }
-  #latest-blog-post > div.card-group .card-list {
-    margin: 5% 5%;
-  }
-  #latest-blog-post > div.card-group .card-list:first-child {
-    margin-left: 0;
-  }
-  #latest-blog-post footer {
-    min-height: 100px;
-  }
-  #latest-blog-post footer hr {
-    border-top: none;
-    border-bottom: solid 0.5px #F3D1BF;
-    width: 80%;
-    margin: 2% auto;
   }
 }
 /* Maioria dos Desktops */

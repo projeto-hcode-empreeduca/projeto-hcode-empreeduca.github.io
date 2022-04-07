@@ -5,6 +5,7 @@
 @import 'about-us.scss';
 @import 'latest-work.scss';
 @import 'testimonials.scss';
+@import 'our-blog.scss';
 
 
 /*
@@ -16,7 +17,6 @@ main header, main section {
     padding: 0 23px;
 }
 main header {
-    border: 1px solid #000;
     display: flex;
     width: 100%;
     height: 80px;
@@ -53,13 +53,9 @@ button.show-desktop {
 section {
     background-color: #FDF0E9;
 }
-section#latest-blog-post,
 section#newsletter {
     flex-direction: column;
-    min-height: 800px;    
-}
-section#latest-blog-post {
-    padding-top: 150px;
+    min-height: 800px;
 }
 section#newsletter>header+div {
     background: url("../images/newsletter-map-background.jpg") no-repeat;
@@ -514,6 +510,90 @@ main {
 /* desta linha para cima é resolução menor que 576px */
 /* medida css e medida do dispositivo */
 
+// Entendendo transformação, transição e animação CSS
+
+// main #hero .modern-studio h1
+
+@keyframes fadeLeftAnimation{
+    from{
+        transform: translateX(-300px);
+        opacity:0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+.fadeLeft{
+    
+    animation-name: fadeLeftAnimation;
+    animation-duration: 1s;
+    animation-delay:0.5s;
+}
+
+@keyframes fadeRightAnimation{
+    from{
+        transform: translateX(300px);
+        opacity:0;
+    }
+    to{
+        transform: translateX(0px);
+        opacity:1;
+    }
+}
+
+.fadeRight{
+    
+    animation-name: fadeRightAnimation;
+    animation-duration: 1s;
+    animation-delay:0.5s;
+}
+@keyframes fadeUpAnimation{
+    from{
+        transform: translateY(300px);
+        opacity:0;
+    }
+    to{
+        transform: translateY(0px);
+        opacity:1;
+    }
+}
+
+.fadeUp{
+    
+    animation-name: fadeUpAnimation;
+    animation-duration: 1s;
+    animation-delay:0.5s;
+}
+// main {
+//     #hero {
+//      .modern-studio{
+//          h1 {
+//                 transform: translateX(-300px);
+//                 transition-duration: 1s;
+//                 opacity:0;
+//          }
+//      }
+//     }
+// }
+
+// body:hover {
+//     #hero {
+//         .modern-studio{
+//             h1 {
+//                 transform: translateX(0px);
+//                 opacity:1;
+//             }
+//         }
+//     }
+// }
+
+
+
+
+
+
 /* Landscape mode */
 @media (min-width: 576px) {}
 
@@ -626,94 +706,6 @@ main {
         margin-left: 50px;
 }
 
-#latest-blog-post {
-    background-color: #FDF0E9;
-    > header  h3{
-        font-weight: normal;
-        text-transform: uppercase;
-        font-size: 0.8em;
-    }
-    >header h2 {
-        font-weight: 900;
-        font-size: 2em;
-        margin: 5%;
-    }
-}
-}
-
-@media (min-width: 768px) {
-    #latest-blog-post {
-        > header {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            padding-left: 10%;
-            padding-right: 10%;
-            align-items: center;
-            h2, h3 {
-                color: var(--font-color-title);
-                margin: 0;
-                flex: 1;
-          }
-          h2 {
-              width: 60%;
-          }
-          h3 {
-              color: var(--font-color-title-h3);
-              margin-bottom: 5%;
-          }
-          .card-list {
-              h4, span {
-                  color: var(--font-color-title);
-              }
-          }
-          button {
-              width: 200px;
-              height: 50px;
-              background-color: #fff;
-              border-radius: 5px;
-              color: var(--font-color-title);
-              box-shadow: 0 3px 9px 0 #39140011;
-              font-weight: bold;
-              transition-duration: 0.5s;
-              cursor: pointer;
-              &:hover {
-                transform: scale(1.5);
-                // animation: efeitoBotao 0.5s;
-              }
-          }
-        }
-        >header h2 {
-            font-size: 4em;
-        }
-        >div.card-group {
-            display: flex;
-            // flex-direction: row;
-            flex-direction: column;
-            padding: 2% 10%;
-            // &:hover {
-            //     background:#b39586;
-            // }
-            .card-list {
-                margin: 5% 5%;
-            }
-            .card-list:first-child {
-                margin-left: 0;
-            }
-        }
-
-        footer {
-            hr {
-                border-top: none;
-                border-bottom: solid 0.5px #F3D1BF;
-                width: 80%;
-                margin: 2% auto;
-            }
-            min-height: 100px;
-        }
-
-    }
 }
 
 /* Maioria dos Desktops */
