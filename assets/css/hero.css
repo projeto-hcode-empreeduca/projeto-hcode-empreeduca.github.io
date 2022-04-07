@@ -1,0 +1,124 @@
+#hero {
+  background-color: #28293E;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  margin-top: -80px;
+  top: 0;
+  flex-direction: column;
+}
+#hero figure {
+  margin: 0;
+}
+#hero .modern-studio {
+  margin-top: 30px;
+}
+#hero .modern-studio > p:nth-child(1) {
+  text-transform: uppercase;
+  color: #EF6D58;
+  font-size: 16px;
+}
+#hero .modern-studio > p.description {
+  color: #FFFFFF65;
+  line-height: 24px;
+}
+#hero .modern-studio > h1 {
+  margin: 20px 0 0 0;
+  color: #FFF;
+  font-size: 3.5em;
+  font-family: "Epilogue-Extra-Bold";
+}
+#hero .modern-studio > div {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#hero .modern-studio > div > a {
+  width: 155px;
+  height: 48px;
+  color: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  font-size: 16px;
+}
+#hero .modern-studio > div > a:nth-child(1) {
+  background-color: #EF6D58;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+#hero .modern-studio > div > a.contact-us {
+  border: 1px solid #FFFFFF65;
+}
+#hero .user-photo {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+#hero .user-photo img {
+  height: 100%;
+}
+#hero .user-photo > div {
+  margin-left: 16px;
+  font-size: 16px;
+}
+#hero .user-photo > div > q {
+  color: var(--font-color-white-85);
+}
+#hero .user-photo > div > small {
+  display: block;
+  color: #FFF;
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 960px) {
+  #hero .banner {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #hero .banner {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 5% 8%;
+  }
+  #hero .banner .image-banner {
+    width: 329px;
+    height: 334px;
+  }
+  #hero .modern-studio {
+    width: 60%;
+  }
+  #hero .modern-studio .modern-studio-star {
+    position: absolute;
+    top: 13vw;
+    left: 30vw;
+    z-index: 0;
+  }
+  #hero .modern-studio h1 {
+    position: relative;
+    margin: 10% 0;
+    z-index: 2;
+  }
+  #hero picture {
+    width: 40%;
+  }
+  #hero .button-group {
+    justify-content: flex-start;
+    margin-top: 10%;
+  }
+  #hero .button-group button:first-child {
+    color: #2d2d2d;
+  }
+  #hero .button-group button:nth-child(2) {
+    margin-left: 5%;
+    font-size: 1.2em;
+  }
+  #hero .user-photo {
+    margin: 0 8%;
+  }
+}

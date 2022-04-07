@@ -1,0 +1,155 @@
+main #about-us {
+  background-color: #FDF0E9;
+  padding-top: 45px;
+  padding-bottom: 115px;
+}
+
+main #about-us .clients {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main #about-us {
+  padding-top: 47px;
+  padding-bottom: 115px;
+  background-color: #FDF0E9;
+}
+
+main #about-us .clients {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  /* margin-bottom: 50px; */
+}
+
+main #about-us .clients img {
+  flex-basis: 150px;
+  height: 100%;
+  margin-bottom: 25px;
+}
+
+main #about-us .clients img:nth-child(1) {
+  /* width: 147px; Deixar sem esse estilo para testar o Lighthouse */
+}
+
+main #about-us .clients img:nth-child(2) {
+  /* width: 108px; Deixar sem esse estilo para testar o Lighthouse */
+}
+
+main #about-us .clients img:nth-child(3) {
+  /* width: 119px; Deixar sem esse estilo para testar o Lighthouse */
+}
+
+main #about-us .clients img:nth-child(4) {
+  /* width: 86px; Deixar sem esse estilo para testar o Lighthouse */
+}
+
+main #about-us .clients img:nth-child(5) {
+  /* width: 126px; Deixar sem esse estilo para testar o Lighthouse */
+}
+
+main #about-us .clients img:nth-child(5) {
+  margin: auto;
+}
+
+main #about-us .clients .row + .row {
+  margin-top: 40px;
+}
+
+main #about-us .clients .row:nth-child(3) {
+  justify-content: center;
+}
+
+main .hr {
+  margin: 50px 0 70px 0;
+  border-color: #F3D1BF;
+}
+
+main .section-subtitle {
+  font-size: 16px;
+  /* Usar em nas fontes */
+  color: #d91e00;
+  text-transform: uppercase;
+  margin-top: 15px;
+}
+
+main .section-title {
+  font-size: 40px;
+  color: #391400;
+  font-weight: 800;
+}
+
+main .section-description {
+  margin-top: 15px;
+  color: var(--font-color-title);
+  font-size: 16px;
+  line-height: 20px;
+}
+
+main #about-us .clients img:nth-child(5) {
+  margin: 0 auto;
+}
+
+main #about-us .hr {
+  border-color: #F3D1BF;
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+main #about-us .about-section {
+  /* border-top: 1px solid;
+  padding-top: 70px;
+  border-top-color: #F3D1BF; */
+  display: flex;
+  flex-direction: column;
+}
+main #about-us .about-section .image-about {
+  width: 329px;
+  height: 340px;
+}
+
+#about-us .company-data {
+  margin-top: 110px;
+  display: grid;
+  grid-auto-rows: 175px;
+}
+#about-us .company-data .data-item {
+  border: 1px solid var(--font-color-f3);
+  padding: 45px 0 0 45px;
+  color: var(--font-color-title);
+  background-color: unset;
+}
+#about-us .company-data .data-item:nth-child(1) {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+#about-us .company-data .data-item:nth-child(3) {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+#about-us .company-data .data-item h4.percentage {
+  font-size: 3em;
+  font-weight: 800;
+  margin: 0;
+}
+#about-us .company-data .data-item p.data {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 1024px) {
+  #about-us .company-data {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #about-us .company-data .data-item:nth-child(1) {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 6px;
+  }
+  #about-us .company-data .data-item:nth-child(3) {
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 6px;
+  }
+}
