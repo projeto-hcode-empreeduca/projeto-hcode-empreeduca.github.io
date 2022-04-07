@@ -1,39 +1,17 @@
-@charset "UTF-8";
-/* seletor universal */
-* {
-  box-sizing: border-box;
-}
+/* Error: Undefined mixin.
+ *    ,
+ * 92 |         @include button-base;
+ *    |         ^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   assets\sass\globals.scss 92:9  root stylesheet */
 
-/* box-sizing - content-box */
-/*
-seletor impuro. Seletor de Tag genérica. 
-CSS reset.
-*/
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Epilogue-Regular";
-}
-body a {
-  text-decoration: none;
-}
-body ol, body ul {
-  padding: 0;
-}
-body ol li, body ul li {
-  list-style: none;
-}
-body main {
-  display: flex;
-  flex-direction: column;
-}
-body .section-with-padding {
-  padding: 92px 23px;
-}
-body .section-with-padding h2 {
-  margin: 25px 0;
-  font-size: 3.5em;
-}
-body .section-with-padding h3, body .section-with-padding h2 {
-  text-align: center;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a    \2577 \a 92 \2502          @include button-base;\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   assets\\sass\\globals.scss 92:9  root stylesheet";
 }

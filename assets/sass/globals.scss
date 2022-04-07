@@ -34,4 +34,85 @@ body {
             text-align: center;
         }
     }
+    form, section {
+        display: flex;
+    }
+    form {
+        flex-direction: column;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        color: var(--font-color-title);
+    }
+    input, select, textarea {
+        min-width: 374px;
+        height: 48px;
+        color: var(--font-color-title);
+        border-radius: 6px;
+        border: 0.5px solid #F3D1BF;
+        background-color: #fff;
+        padding-left: 10%;
+    }
+    section {
+        background-color: #FDF0E9;
+    }
+    button {
+        background-color: #EF6D58;
+        border: 0;
+        border-radius: 6px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: bold;
+        height: 48px;
+        margin-top: 10%;
+        padding: 0 20px;
+        width: 374px;
+    }
+    main header,
+    main section {
+        padding: 0 23px;
+    }
+    main .show-mobile {
+        display: block;
+    }
+    main .show-desktop {
+        display: none;
+    }
+    main .section-subtitle {
+        color: #EF6D58;
+        font-size: 1em;
+        text-transform: uppercase;
+    }
+    
+    main .section-title {
+        color: #391400;
+        font-weight: 900;
+        font-size: 2.5em;
+    }
+    main .button-link {
+        @include button-base;
+        width: 138px;
+        background-color: #FFF;
+        box-shadow: 0px 3px 9px #39140008;
+        color: var(--font-color-title);
+    }
+    main .form-input {
+        margin-top: 10%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    main .show-mobile {
+        display: none!important;
+    }
+    main .show-desktop {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    main .desktop-max-width {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 }

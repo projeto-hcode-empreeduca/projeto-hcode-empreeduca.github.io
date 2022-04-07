@@ -1,3 +1,85 @@
+main #about-us .about-description > h3 {
+  color: #391400;
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+main #about-section h3 {
+  margin-top: 30px;
+}
+
+main .company-data {
+  margin-top: 110px;
+}
+
+main .company-data > div {
+  width: 100%;
+  height: 175px;
+  background-color: unset;
+  border: 1px solid #F3D1BF;
+  padding: 45px 0 0 45px;
+  color: #391400;
+}
+
+main .company-data p {
+  margin: 0;
+}
+
+main .company-data > div .percentage {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+main .company-data > div .data {
+  margin: 0;
+  margin-top: 15px;
+  font-size: 20px;
+}
+
+main .features {
+  margin-top: 80px;
+}
+
+main .features .features-items li {
+  /* list-style-image: url("../images/check.png"); */
+  background: url("../images/check.png") no-repeat left center;
+  padding: 20px 0 17px 47px;
+  list-style: none;
+  margin: 0;
+  vertical-align: middle;
+  margin-bottom: 15px;
+}
+
+main .features > div:nth-child(2) {
+  margin-top: 130px;
+}
+
+main .services .quotation {
+  display: flex;
+  width: 100%;
+  margin: 20px 0;
+}
+
+main .services .quotation > div {
+  margin-left: 20px;
+}
+
+main .services .quotation q {
+  font-size: 14px;
+  color: #39140065;
+}
+
+main .services .quotation small {
+  display: block;
+  margin-top: 5px;
+  font-size: 16px;
+  color: #391400;
+}
+
+main .services > div:nth-child(2) {
+  margin-top: 125px;
+}
+
 main #about-us {
   background-color: #FDF0E9;
   padding-top: 45px;
@@ -29,26 +111,6 @@ main #about-us .clients img {
   flex-basis: 150px;
   height: 100%;
   margin-bottom: 25px;
-}
-
-main #about-us .clients img:nth-child(1) {
-  /* width: 147px; Deixar sem esse estilo para testar o Lighthouse */
-}
-
-main #about-us .clients img:nth-child(2) {
-  /* width: 108px; Deixar sem esse estilo para testar o Lighthouse */
-}
-
-main #about-us .clients img:nth-child(3) {
-  /* width: 119px; Deixar sem esse estilo para testar o Lighthouse */
-}
-
-main #about-us .clients img:nth-child(4) {
-  /* width: 86px; Deixar sem esse estilo para testar o Lighthouse */
-}
-
-main #about-us .clients img:nth-child(5) {
-  /* width: 126px; Deixar sem esse estilo para testar o Lighthouse */
 }
 
 main #about-us .clients img:nth-child(5) {
@@ -100,9 +162,6 @@ main #about-us .hr {
 }
 
 main #about-us .about-section {
-  /* border-top: 1px solid;
-  padding-top: 70px;
-  border-top-color: #F3D1BF; */
   display: flex;
   flex-direction: column;
 }
@@ -139,8 +198,128 @@ main #about-us .about-section .image-about {
   font-size: 20px;
   margin-top: 15px;
 }
+#about-us #how-we-work {
+  margin-top: 95px;
+  display: flex;
+  flex-direction: column;
+}
+#about-us #how-we-work .section-description {
+  margin-bottom: 30px;
+}
+#about-us #how-we-work a {
+  color: var(--font-color-title);
+  font-size: 1em;
+}
+#about-us #how-we-work ol {
+  margin: 70px 0;
+}
+#about-us #how-we-work ol li {
+  color: var(--font-color-title);
+  font-weight: 800;
+  font-size: 2em;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  counter-increment: hcode-counter;
+}
+#about-us #how-we-work ol li:before {
+  width: 1em;
+  content: counter(hcode-counter);
+  font-size: 2.3em;
+  padding-right: 0.2em;
+}
 
+@media screen and (min-width: 768px) {
+  main .about-description .button-link {
+    margin-top: 30px;
+  }
+
+  main #about-us .features {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  main #about-us .features .features-items {
+    padding: 0;
+  }
+
+  main #about-us .features .features-items li {
+    /* list-style-image: url("../images/icons/check.png"); */
+    background: url("../images/icons/check.png") no-repeat;
+    list-style: none;
+    margin: 0;
+    vertical-align: middle;
+    padding: 10px 0 15px 50px;
+    margin-bottom: 15px;
+  }
+
+  main .features > div:nth-child(1) {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+
+  main #about-us .clients img {
+    flex-basis: 185px;
+  }
+
+  main #about-us .clients img:nth-child(4) {
+    margin: auto;
+  }
+
+  main #about-us .clients .row + .row {
+    margin-top: 0;
+  }
+
+  main #about-us .about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  main #about-us .about-section > div,
+main .services > div:nth-child(1) > div {
+    width: 415px;
+  }
+
+  main .company-data {
+    display: flex;
+  }
+
+  main .services > div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width: 960px) {
+  main #about-us .clients img {
+    margin-bottom: unset;
+  }
+
+  main #about-us .clients img:nth-child(5) {
+    margin: initial;
+  }
+}
 @media screen and (min-width: 1024px) {
+  main #about-us .clients img {
+    margin: initial !important;
+  }
+
+  main #about-us .about-section {
+    flex-direction: row;
+  }
+
+  main #about-us .features {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  main #about-us .about-section .about-description,
+main #about-us .features .about-description {
+    margin-left: 50px;
+  }
+
   #about-us .company-data {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -151,5 +330,8 @@ main #about-us .about-section .image-about {
   #about-us .company-data .data-item:nth-child(3) {
     border-bottom-left-radius: 0;
     border-top-right-radius: 6px;
+  }
+  #about-us #how-we-work {
+    flex-direction: row;
   }
 }

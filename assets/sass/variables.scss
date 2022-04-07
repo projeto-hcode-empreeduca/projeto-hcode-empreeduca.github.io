@@ -18,6 +18,7 @@ CSS
     --font-color-white-85: #FFFFFF85;
     --font-color-f3: #F3D1BF;
 }
+// Hoisting. Se declararmos uma variável global, usando o :root, o CSS seleciona essa variável e a deixa ela disponível na aplicação inteira, mesmo em arquivos chamados antes da criação da variável
 // Chamar uma variável
 // var(--color)
 // 1 - É CSS puro, padrão

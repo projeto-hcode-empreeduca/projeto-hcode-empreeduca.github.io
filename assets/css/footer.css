@@ -1,0 +1,95 @@
+footer {
+  background-color: var(--bg-default);
+  padding: 120px 23px 35px 23px;
+  display: flex;
+  flex-direction: column;
+}
+footer #footer-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 1px solid #F3D1BF;
+  padding-bottom: 50px;
+  width: 100%;
+}
+footer #footer-menu ul.menu-list li {
+  margin-top: 20px;
+}
+footer #footer-menu ul.menu-list li a {
+  color: var(--font-color-title);
+}
+footer #footer-menu .service {
+  padding: 50px 0;
+}
+footer #footer-menu .social-media {
+  display: flex;
+}
+footer #footer-menu .social-media .item {
+  width: 48px;
+  height: 48px;
+  background-color: #EF6D58;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer #footer-menu .social-media .item + .item {
+  margin-left: 10px;
+}
+footer #footer-menu .social-media .item .facebook, footer #footer-menu .social-media .item .instagram {
+  height: 16px;
+}
+footer #footer-menu .social-media .item .twitter {
+  height: 14px;
+}
+footer div#copyright {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 45px;
+}
+footer div#copyright p {
+  color: var(--font-color-alpha);
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 25px;
+}
+footer div#copyright div {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+footer div#copyright div a {
+  color: var(--font-color-title);
+  font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+  footer #footer-menu {
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  footer #footer-menu .service {
+    padding: 0;
+  }
+  footer div#copyright {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  footer div#copyright p {
+    margin: 0;
+    width: auto;
+  }
+  footer div#copyright div {
+    margin: 0;
+  }
+  footer div#copyright div a:nth-child(2) {
+    margin-left: 40px;
+  }
+}

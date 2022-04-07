@@ -1,0 +1,41 @@
+section#newsletter {
+  flex-direction: column;
+  min-height: 800px;
+}
+
+section#newsletter > header + div {
+  background: url("../images/newsletter-map-background.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 700px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+section#newsletter {
+  padding-top: 5%;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+section#newsletter > header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+section div#form-get-in-touch {
+  flex-direction: column;
+  background: #fff;
+  border-radius: 6px;
+  padding: 2%;
+  width: 450px;
+  margin-left: 5%;
+}
+
+section div#form-get-in-touch input,
+section div#form-get-in-touch select,
+section div#form-get-in-touch textarea {
+  width: 300px;
+}

@@ -1,3 +1,62 @@
+main #hero {
+    width: 100%;
+    background-color: #28293e;
+    margin-top: -80px;
+    padding-top: 80px;
+    top: 0;
+    min-height: 100vh;
+}
+
+main #hero p,
+main #hero h1 {
+    color: #fff;
+}
+
+main #hero h2 {
+    color: #ef6d58;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    letter-spacing: 4px;
+}
+
+main #hero h1 {
+    font-size: 3.5em;
+    font-family: "Epilogue-Bold";
+    font-weight: 900;
+    margin: 0;
+}
+
+main #hero p {
+    letter-spacing: 1px;
+    line-height: 2em;
+}
+
+main #hero {
+    padding: 90px 5% 5% 5%;
+}
+
+main #hero .button-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+}
+
+main #hero .button-group a {
+    @include button-base;
+    min-width: 150px;    
+    color: #fff;
+}
+
+/* pseudo seletor. : significa um seletor condicional */
+main #hero .button-group button:first-child {
+    background-color: #ef6d58;    
+}
+
+main #hero .modern-studio .modern-studio-star {
+    position: absolute;
+}
+
 #hero {
     background-color: #28293E;
     padding-top: 80px;
@@ -72,7 +131,36 @@
     }
 }
 
+@media screen and (min-width: 768px) {
+    main #hero .modern-studio > div {
+        justify-content: flex-start;
+    }
+    main #hero .modern-studio > p.description {
+        margin-top: 25px;
+    }
+    main #hero .modern-studio > div {
+        margin-top: 35px;
+    }
+    main #hero .modern-studio > div a:nth-child(2) {
+        margin-left: 20px;
+    }
+    main #hero .user-photo {
+        justify-content: unset;
+    }
+}
+
 @media screen and (min-width: 960px) {
+    main #hero .modern-studio {
+        width: 40%;
+    }
+
+    main #hero .modern-studio h1 {
+        font-size: 4em;
+    }
+
+    main #hero picture {
+        width: initial;
+    }
     #hero {
         .banner {
             display: flex;
@@ -127,5 +215,15 @@
         .user-photo {
             margin: 0 8%;
         }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    main #hero .modern-studio {
+        width: 45%;
+    }
+
+    main #hero .modern-studio h1 {
+        font-size: 4.5em;
     }
 }
