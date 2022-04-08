@@ -6,7 +6,7 @@ section#latest-work > div {
   width: 100%;
 }
 section#latest-work > div select {
-  min-width: 100%;
+  width: 100%;
   padding-left: 16px;
 }
 section#latest-work > div h2, section#latest-work > div h4 {

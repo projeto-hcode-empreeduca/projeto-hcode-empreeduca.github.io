@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/*
+// Estratégia que faz o main surgir
+
+@keyframes loadingAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+body {
+    overflow: auto;
+    .backdrop {
+        display: none;
+    }
+    &.loading {
+        overflow: hidden;
+        .backdrop {
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                animation-name: loadingAnimation;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+            }
+        }
+        main {
+            opacity: 0;
+        }
+    }
+}
+*/
+/*
+// Animation com scale
+@keyframes loadingAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+*/
+@keyframes loadingAnimation {
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+body {
+  overflow: hidden;
+}
+body .backdrop {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all ease 0.5s;
+}
+body .backdrop svg {
+  animation-name: loadingAnimation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+body.loading-finalized {
+  overflow: auto;
+}
+body.loading-finalized::-webkit-scrollbar {
+  width: 7px;
+}
+body.loading-finalized::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 6px;
+}
+body.loading-finalized .backdrop {
+  opacity: 0;
+}

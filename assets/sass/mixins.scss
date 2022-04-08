@@ -8,3 +8,24 @@
     font-weight: 900;
     border-radius: 6px;
 }
+@mixin button-without-background {
+    @include button-base;
+    justify-content: flex-start;
+    width: fit-content;    
+    color: var(--font-color-title);
+}
+@mixin button-green {
+    @include button-base;
+    width: fit-content;
+    display: initial;
+    height: 100%;
+    color: #fff;
+    padding: 15px;
+    background-color: aquamarine;
+}
+
+@mixin container-item {
+    border: 1px solid var(--font-color-f3);
+    padding: 50px 30px;
+    cursor: pointer;
+}

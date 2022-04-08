@@ -27,13 +27,27 @@ section div#form-get-in-touch {
     flex-direction: column;
     background: #fff;
     border-radius: 6px;
-    padding: 2%;
+    padding: 5%;
     // width: 500px;
-    width: 450px;
-    margin-left: 5%;
+    width: 350px;
+    margin: 0 auto;
 }
 section div#form-get-in-touch input,
 section div#form-get-in-touch select,
 section div#form-get-in-touch textarea {
     width: 300px;
+}
+
+div#form-get-in-touch {
+    button {
+        width: inherit;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    section {
+        div#form-get-in-touch {
+            width: 470px;
+        }
+    }
 }

@@ -1,0 +1,105 @@
+/*
+// Estratégia que faz o main surgir
+
+@keyframes loadingAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+body {
+    overflow: auto;
+    .backdrop {
+        display: none;
+    }
+    &.loading {
+        overflow: hidden;
+        .backdrop {
+            width: 100%;
+            height: 100vh;
+            background-color: #000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            svg {
+                animation-name: loadingAnimation;
+                animation-duration: 1.5s;
+                animation-iteration-count: infinite;
+            }
+        }
+        main {
+            opacity: 0;
+        }
+    }
+}
+*/
+
+/*
+// Animation com scale
+@keyframes loadingAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+*/
+
+// Animation com fadeIn e fadeOut
+@keyframes loadingAnimation {
+    25% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// Animação para o backdrop desaparecer
+body {    
+    overflow: hidden;
+    .backdrop {
+        width: 100%;
+        height: 100vh;
+        background-color: #000;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 1;
+        transition: all ease 0.5s;
+        svg {
+            animation-name: loadingAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+        }
+    }    
+    
+    &.loading-finalized {
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: #ccc;
+            border-radius: 6px;
+        }
+        .backdrop {
+            opacity: 0;
+        }    
+    }
+}

@@ -23,6 +23,8 @@ body {
     main {
         display: flex;
         flex-direction: column;
+        opacity: 1;
+        transition: all ease 1s;
     }
     .section-with-padding {
         padding: 92px 23px;
@@ -44,7 +46,7 @@ body {
         color: var(--font-color-title);
     }
     input, select, textarea {
-        min-width: 374px;
+        width: 374px;
         height: 48px;
         color: var(--font-color-title);
         border-radius: 6px;
