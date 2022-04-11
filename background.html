@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        #container {
+            font-size: 30px;
+        }
+        #container h2 {            
+            font-weight: bold;
+        }
+        #container .subtitle:nth-of-type(1) {
+            color: red;
+        }
+        #container .subtitle:nth-of-type(2) {
+            color: blue;
+        }
+        #container .subtitle:nth-of-type(3) {
+            color: green;
+        }
+        #container .subtitle:nth-of-type(4) {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- nth-child -> Ele verifica 1) o tipo do elemento que você informou e 2) a posição do elemento em relação ao elemento pai -->
+
+    <div id="container">
+        <!-- 1 --> <h2 class="subtitle">Seja bem-vindo</h2>
+
+        <!-- 2 --> <h2 class="subtitle">Se inscreva</h2>
+
+        <!-- 3 --> <p class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet fugiat nemo inventore hic, commodi beatae, animi laboriosam accusamus repellendus quae sapiente cupiditate dolor possimus. Sunt rerum dolores earum illum quisquam?</p>
+
+        <!-- 3 --> <p class="subtitle">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet fugiat nemo inventore hic, commodi beatae, animi laboriosam accusamus repellendus quae sapiente cupiditate dolor possimus. Sunt rerum dolores earum illum quisquam?</p>
+
+        <!-- 4 --> <h2 class="subtitle">Deixa o like</h2>
+
+        <!-- 5 --> <h2 class="subtitle">Ativa o sininho</h2>
+    </div>
+
+</body>
+</html>
