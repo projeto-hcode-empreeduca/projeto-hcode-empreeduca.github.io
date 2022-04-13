@@ -1327,6 +1327,11 @@ section#faq > div div.faq-questions div.faq-item.open {
 section#faq > div div.faq-questions div.faq-item.open svg {
   transform: rotate(180deg);
 }
+section#faq > div div.faq-questions div.faq-item.open p {
+  margin-top: 20px;
+  opacity: 1;
+  height: auto;
+}
 section#faq > div div.faq-questions div.faq-item:hover {
   cursor: pointer;
   transform: scale(1.05);
@@ -1346,8 +1351,17 @@ section#faq > div div.faq-questions div.faq-item div {
   align-items: center;
   justify-content: space-between;
 }
+section#faq > div div.faq-questions div.faq-item div svg {
+  transition: all ease 1.5s;
+}
 section#faq > div div.faq-questions div.faq-item div h3 {
   margin: 0;
+}
+section#faq > div div.faq-questions div.faq-item p {
+  opacity: 0;
+  height: 0;
+  margin: 0;
+  transition: opacity ease 1s, height ease 0.5s;
 }
 
 #latest-blog-post {

@@ -47,6 +47,11 @@ section#faq {
                     svg {
                         transform: rotate(180deg);
                     }
+                    p {
+                        margin-top: 20px;
+                        opacity: 1;
+                        height: auto;
+                    }
                 }                
                 &:hover {
                     cursor: pointer;
@@ -66,9 +71,18 @@ section#faq {
                     flex-direction: row;
                     align-items: center;
                     justify-content: space-between;
+                    svg {
+                        transition: all ease 1.5s;
+                    }
                     h3 {
                         margin: 0;
                     }
+                }
+                p {
+                    opacity: 0;
+                    height: 0;
+                    margin: 0;
+                    transition: opacity ease 1s, height ease 0.5s;
                 }
             }
         }
