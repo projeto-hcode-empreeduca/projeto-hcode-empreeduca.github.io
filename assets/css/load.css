@@ -97,4 +97,5 @@ body.loading-finalized::-webkit-scrollbar-thumb {
 }
 body.loading-finalized .backdrop {
   opacity: 0;
+  display: none;
 }

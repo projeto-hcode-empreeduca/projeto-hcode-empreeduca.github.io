@@ -554,27 +554,28 @@
             </header>
             <div>
                 <div id="form-get-in-touch">
-                    <form action="">
+                    <!-- <form action="enviar.php" method="POST"> -->
+                    <form>
                         <h3>Getin touch</h3>
                         <div class="form-input">
                             <label for="email-get-in-touch">Your email</label>
-                            <input type="text" id="email-get-in-touch" />
+                            <input type="email" id="email-get-in-touch" name="my-email" />
                         </div>
 
                         <div class="form-input">
-                            <select name="" id="">
+                            <select name="selected-subject" id="">
                                 <option value="" selected>Subject</option>
-                                <option value="">Suggest</option>
-                                <option value="">Question</option>
-                                <option value="">Problem</option>
+                                <option value="1">Suggest</option>
+                                <option value="2">Question</option>
+                                <option value="3">Problem</option>
                             </select>
                         </div>
 
                         <div class="form-input">
                             <label for="message-get-in-touch">Message</label>
-                            <textarea name="" id="" cols="30" rows="10" id="message-get-in-touch" placeholder="Message"></textarea>
+                            <textarea name="my-message" id="" cols="30" rows="10" id="message-get-in-touch" placeholder="Message"></textarea>
                         </div>
-                        <button>SUBMIT NOW</button>
+                        <button type="submit">SUBMIT NOW</button>
                     </form>
                 </div>
             </div>
@@ -658,62 +659,9 @@
         </footer>
     </main>
 
-    <script>
-
-        const getElementFadeIn = (element, scroll, effect) => {
-            // console.log('verificando o resultado de el', element);
-            // document.querySelectorAll(el).forEach(element => {
-            const offSet = element.offsetTop;
-
-            const windowHeight = window.innerHeight;
-            if (scroll < offSet && scroll < (offSet + window.innerHeight)) {
-                element.classList.add(effect);
-            } else {
-                element.classList.remove(effect);
-            }
-
-            // })
-        }
-
-        document.addEventListener('scroll', (e) => {
-            const scroll = window.scrollY;
-            const header = document.querySelector('.header-top-site');
-            // getElementFadeIn(".clients", scroll);
-            // getElementFadeIn(".about-section", scroll);
-            document.querySelectorAll(".animateFadeUp").forEach((element) => {
-                getElementFadeIn(element, scroll, 'fadeUp');
-            });
-
-            document.querySelectorAll(".animateFadeLeft").forEach((element) => {
-                getElementFadeIn(element, scroll, 'fadeLeft');
-            });
-            if (scroll > 800) {
-                header.classList.add('scroll');
-            } else {
-                header.classList.remove('scroll');
-            }
-        });
-
-        // Eventos
-        // 1 - Usuário
-        // Clique em um elemento, scroll, digitar em um campo de input
-
-        // 2 - Página
-        // Quando uma página carrega, quando os elementos são carregados
-
-        // DOM - Document Object Model (Modelo de Objetos do Documento)
-        // Interface que permite que o JavaScript interaja com o HTML e CSS e possa então manipulá-los
-
-        // Window vs Document
-        window.addEventListener("load", function() { // Página está 100%, pronta para ser usada
-            console.log("Página pronta.");
-            document.querySelector('body').classList.add('loading-finalized');
-        });
-
-        document.addEventListener("DOMContentLoaded", function() { // Conteúdo foi carregado, mas sem estilo e sem o JS
-            console.log("Conteúdo da página carregado.");
-        });
-    </script>
+    <script src="./assets/js/load.js"></script>
+    <script src="./assets/js/animations.js"></script>
+    <script src="./assets/js/form.js"></script>
 
 </body>
 
