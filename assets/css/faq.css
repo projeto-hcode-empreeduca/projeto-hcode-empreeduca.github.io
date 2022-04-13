@@ -1,0 +1,76 @@
+section#faq {
+  width: 100%;
+}
+section#faq > div {
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+section#faq > div div.faq-head {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: flex-start;
+}
+section#faq > div div.faq-head h2 {
+  animation-duration: 700ms;
+  margin: 0;
+  color: var(--font-color-title);
+  font-size: 1.3em;
+}
+section#faq > div div.faq-head span {
+  animation-duration: 600ms;
+  font-size: 2.1em;
+  width: 85%;
+}
+section#faq > div div.faq-head p {
+  animation-duration: 700ms;
+  width: 86%;
+  font-size: 1em;
+}
+section#faq > div div.faq-head a {
+  animation-duration: 1000ms;
+}
+section#faq > div div.faq-questions {
+  max-width: 510px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+section#faq > div div.faq-questions div.faq-item {
+  padding: 40px 30px;
+  background-color: transparent;
+  border: 1px solid var(--font-color-f3);
+}
+section#faq > div div.faq-questions div.faq-item.open {
+  background-color: var(--font-color-white);
+}
+section#faq > div div.faq-questions div.faq-item.open svg {
+  transform: rotate(180deg);
+}
+section#faq > div div.faq-questions div.faq-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+section#faq > div div.faq-questions div.faq-item:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+section#faq > div div.faq-questions div.faq-item:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 70px;
+}
+section#faq > div div.faq-questions div.faq-item div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+section#faq > div div.faq-questions div.faq-item div h3 {
+  margin: 0;
+}

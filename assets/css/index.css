@@ -108,7 +108,7 @@ body main section {
   padding: 0 23px;
 }
 body main .show-mobile {
-  display: block;
+  display: flex;
 }
 body main .show-desktop {
   display: none;
@@ -374,6 +374,8 @@ main header button {
   width: 48px;
   border: 1px solid #FFFFFF30;
   background-color: transparent;
+  padding: 0;
+  margin-top: 0;
 }
 
 main header > div#container > div {
@@ -393,6 +395,51 @@ main header button {
   border: 1px solid #ffffff30;
   border-radius: 6px;
   background-color: unset;
+}
+
+body.open-menu {
+  overflow: hidden;
+}
+body.open-menu header .mobile-menu {
+  right: 0;
+}
+body.open-menu header .overlay {
+  display: flex;
+}
+body header .overlay {
+  width: 100%;
+  height: 100vh;
+  background-color: #00000090;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 11;
+  display: none;
+}
+body header .mobile-menu {
+  width: 300px;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  right: -300px;
+  top: 0;
+  z-index: 15;
+  padding: 10%;
+  flex-direction: row-reverse;
+  transition: all ease 0.8s;
+}
+body header .mobile-menu ul {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body header .mobile-menu ul li {
+  margin-top: 20px;
+}
+body header .mobile-menu ul li a {
+  color: var(--font-color-title);
+  font-size: 18px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1226,6 +1273,83 @@ section#pricing .pricing-container .pricing-item.popular a {
     margin: 0;
   }
 }
+section#faq {
+  width: 100%;
+}
+section#faq > div {
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+section#faq > div div.faq-head {
+  display: inherit;
+  flex-direction: inherit;
+  align-items: flex-start;
+}
+section#faq > div div.faq-head h2 {
+  animation-duration: 700ms;
+  margin: 0;
+  color: var(--font-color-title);
+  font-size: 1.3em;
+}
+section#faq > div div.faq-head span {
+  animation-duration: 600ms;
+  font-size: 2.1em;
+  width: 85%;
+}
+section#faq > div div.faq-head p {
+  animation-duration: 700ms;
+  width: 86%;
+  font-size: 1em;
+}
+section#faq > div div.faq-head a {
+  animation-duration: 1000ms;
+}
+section#faq > div div.faq-questions {
+  max-width: 510px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 70px;
+}
+section#faq > div div.faq-questions div.faq-item {
+  padding: 40px 30px;
+  background-color: transparent;
+  border: 1px solid var(--font-color-f3);
+}
+section#faq > div div.faq-questions div.faq-item.open {
+  background-color: var(--font-color-white);
+}
+section#faq > div div.faq-questions div.faq-item.open svg {
+  transform: rotate(180deg);
+}
+section#faq > div div.faq-questions div.faq-item:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+section#faq > div div.faq-questions div.faq-item:first-child {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+section#faq > div div.faq-questions div.faq-item:last-child {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  margin-bottom: 70px;
+}
+section#faq > div div.faq-questions div.faq-item div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+section#faq > div div.faq-questions div.faq-item div h3 {
+  margin: 0;
+}
+
 #latest-blog-post {
   flex-direction: column;
   min-height: 800px;

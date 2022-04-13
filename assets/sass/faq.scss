@@ -1,0 +1,76 @@
+section#faq {
+    width: 100%;
+    > div {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        div.faq-head {
+            display: inherit;
+            flex-direction: inherit;
+            align-items: flex-start;
+            h2 {
+                animation-duration: 700ms;
+                margin: 0;
+                color: var(--font-color-title);
+                font-size: 1.3em;
+            }
+            span {
+                animation-duration: 600ms;
+                font-size: 2.1em;
+                width: 85%;
+            }
+            p {
+                animation-duration: 700ms;
+                width: 86%;
+                font-size: 1em;
+            }
+            a {
+                animation-duration: 1000ms;
+            }
+        }
+        div.faq-questions {
+            max-width: 510px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 70px;
+            div.faq-item {
+                padding: 40px 30px;
+                background-color: transparent;
+                border: 1px solid var(--font-color-f3);
+                &.open {
+                    background-color: var(--font-color-white);
+                    svg {
+                        transform: rotate(180deg);
+                    }
+                }                
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.05);
+                }
+                &:first-child {
+                    border-top-left-radius: 8px;
+                    border-top-right-radius: 8px;                    
+                }
+                &:last-child {
+                    border-bottom-left-radius: 8px;
+                    border-bottom-right-radius: 8px;
+                    margin-bottom: 70px;
+                }
+                div {                    
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    h3 {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

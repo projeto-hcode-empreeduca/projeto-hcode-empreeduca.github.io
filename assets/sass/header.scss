@@ -53,6 +53,8 @@ main header button {
     width: 48px;
     border: 1px solid #FFFFFF30;
     background-color: transparent;
+    padding: 0;
+    margin-top: 0;
 }
 
 main header>div#container>div {
@@ -72,6 +74,57 @@ main header button {
     border: 1px solid #ffffff30;
     border-radius: 6px;
     background-color: unset;
+}
+
+body {
+    &.open-menu {
+        overflow: hidden;
+        header {
+            .mobile-menu {
+                right: 0;
+            }
+            .overlay {
+                display: flex;
+            }
+        }
+    }
+    header {
+        .overlay {
+            width: 100%;
+            height: 100vh;
+            background-color: #00000090;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 11;
+            display: none;
+        }
+        .mobile-menu {
+            width: 300px;
+            height: 100vh;
+            background-color: #fff;
+            position: fixed;
+            right: -300px;
+            top: 0;
+            z-index: 15;
+            padding: 10%;
+            flex-direction: row-reverse;
+            transition: all ease 0.8s;
+            ul {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                li {
+                    margin-top: 20px;
+                    a {
+                        color: var(--font-color-title);
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
